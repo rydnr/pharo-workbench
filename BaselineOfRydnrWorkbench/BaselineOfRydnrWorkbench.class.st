@@ -5,6 +5,14 @@ Class {
 }
 
 { #category : #baselines }
+BaselineOfRydnrWorkbench >> awsSdk: spec [
+	spec
+		baseline: 'AWS'
+		with:
+			[ spec repository: 'github://newapplesho/aws-sdk-smalltalk/pharo-repository' ]
+]
+
+{ #category : #baselines }
 BaselineOfRydnrWorkbench >> awsToolbox: spec [
 	spec
 		baseline: 'AWSToolbox'
@@ -16,10 +24,10 @@ BaselineOfRydnrWorkbench >> awsToolbox: spec [
 BaselineOfRydnrWorkbench >> baseline: aSpec [
 	<baseline>
 	self awsToolbox: aSpec.
+	self awsSdk: aSpec.
 	aSpec
 		for: #common
-		do: [ 
-			aSpec blessing: #baseline.
+		do: [ aSpec blessing: #baseline.
 			self declarePackagesIn: aSpec ]
 ]
 
