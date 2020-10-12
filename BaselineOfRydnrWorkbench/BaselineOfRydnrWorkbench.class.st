@@ -7,10 +7,9 @@ Class {
 { #category : #baselines }
 BaselineOfRydnrWorkbench >> awsToolbox: spec [
 	spec
-		project: 'AWSToolbox'
+		baseline: 'AWSToolbox'
 		with: [ spec
-				 repository: 'github://jvdsandt/pharo-aws-toolbox/repository';
-	  baseline: 'AWSToolbox' ]
+				repository: 'github://jvdsandt/pharo-aws-toolbox/repository' ]
 ]
 
 { #category : #baselines }
