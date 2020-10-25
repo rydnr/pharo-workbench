@@ -24,7 +24,7 @@ BaselineOfRydnrWorkbench >> awsToolbox: spec [
 BaselineOfRydnrWorkbench >> baseline: aSpec [
 	<baseline>
 	self awsToolbox: aSpec.
-	self awsSdk: aSpec.
+	"self awsSdk: aSpec."
 	aSpec
 		for: #common
 		do: [ aSpec blessing: #baseline.
